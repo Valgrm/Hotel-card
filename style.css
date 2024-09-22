@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #00002b;
+    font-family: "Inter", system-ui;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+            'FILL' 1,
+            'wght' 300,
+            'GRAD' 0,
+            'opsz' 24
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    position: relative;
+    height: 475px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    /*inset 0 0 12px rgba(0, 0, 0, 0.6);*/
+    overflow-y: auto;
+    /*background: #F4F5F7;*/
+    cursor: pointer;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+.titlebg {
+    background: none;
+    transition: all 0.2s ease-in-out;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-radius: 26px;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+}
+.titlebg-click{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-radius: 26px;
+    background: white;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+.info {
+    transform: translateY(350px);
+    margin: 18px;
+    transition: all 0.3s ease-in-out;
+    background: rgb(255 255 255 / 38%);
+    box-shadow: 0 4px 30px rgb(85 85 85 / 10%);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border-radius: 28px;
+    transition: all 0.3s ease-in-out;
+}
+.info-click{
+    transform: translateY(0);
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #F4F5F7 !important;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    gap: 22px;
+    border-radius: 28px;
+    transition: all 0.3s ease-in-out;
+}
+.white{
+    color: white;
+}
+.whitetrue{
+    color: #00002b;
+}
+.whitebg{
+    background: white !important;
+}
+.whitebgtrue{
+    background: #00002b !important;
+}
+.title {
+    max-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-villa{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.title-container{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 28px;
+    pointer-events: none;
+}
+.price {
+    display: flex;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+#thin {
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+.bar {
+    /* font-size: 10px */
+    width: 3.5em;
+    height: 3px;
+    position: relative;
+    background: rgba(48, 48, 48, 0.38);
+    border-radius: 12px;
+}
+.bar .percentage {
+    position: relative;
+    font-size: 1em;
+    background: #00002b;
+    height: 3px;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.hover-text{
+    display: flex;
+    justify-content: space-between;
+    max-height: 0px;
+    transform: translateY(3px);
+    overflow: hidden;
+    font-size: 14px;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+.location{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.guest{
+    display: flex;
+    gap: 5px;
+}
+.offers{
+    opacity: 0;
+}
+.offers span{
+    font-size: 0.8rem;
+    color: #5c5c5c;
+}
+.offers-click{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 28px;
+    opacity: 100%;
+}
+.reserve-container{
+    position: absolute;
+    background: none;
+    transition: all 0.1s ease-in-out;
+    pointer-events: true;
+    bottom: 0;
+    border-radius: 26px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reserve-container-click{
+    position: sticky !important;
+    bottom: 0;
+    border-radius: 26px;
+    width: 100%;
+    background: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+.reserve{
+    right: -80px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 10px;
+    background: #060630;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+.card:hover .reserve {
+    right: 18px;
+}
+.reserve-click{
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 12px 125px;
+    text-align: center;
+    background: #A6E900;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    right: 22px;
+    bottom: auto;
+    transform: translateX(-4px);
+}
+
+.card:hover .hover-text{
+    max-height: 100px; /* Ajuster cette valeur selon la hauteur du contenu */
+    transition: all 0.2s ease-in-out;
+}
+
+.reservep{
+    color: white;
+}
+.reservep-click{
+    color: white;
+    font-weight: 300 !important; ;
+}
+.reserve:hover{
+    transform: scale(0.98) translateX(-4px);
+    background: #b4ef21;
+}
+.reserve:hover p{
+    color: #00002b;
+}
+.favorite{
+    opacity: 0;
+}
+.favorite-click{
+    padding: 0 28px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    opacity: 100%;
+}
+.display-none{
+    display: none !important;
+}
+.display-flex{
+    display: flex !important;
+}
+.amenities{
+    opacity: 0;
+}
+.amenities-click{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 28px;
+    cursor: pointer;
+    opacity: 100%;
+}
+.amenities span{
+    width: 100%;
+    border-radius: 16px;
+    padding: 12px;
+    text-wrap: nowrap;
+    text-align: center;
+    border: 1px solid #00002b;
+    color: #00002b;
+    font-size: 0.8rem;
+}
+.amenities:hover span{
+    background: #e3e3e3;
+}
+.calendar{
+    opacity: 0;
+}
+.calendar-click{
+    display: flex;
+    padding: 0 28px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    opacity: 100%;
+}
+.calendar i{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.calendar-text{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.date{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #5c5c5c;
+}
+
